@@ -15,3 +15,5 @@ const decrypt = (encrypted) => {
 }
 
 console.log(decrypt(":QPLVA;?<<J99=<>;7"));
+
+module.exports = decrypt;
