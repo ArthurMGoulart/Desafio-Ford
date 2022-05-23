@@ -18,10 +18,10 @@ const getCesarKey = (vimNumber) => {
 const encrypt = (vimNumber) => {
   let result = "";
   const CESAR_KEY = getCesarKey(vimNumber);
-  for (let i = 0; i < VIM_NUMBER.length; i++) {
+  for (let i = 0; i < vimNumber.length; i++) {
     // Character to Ascii + 2 + cesar key and add to result string
     // Transforma o character em ASCII soma 2 fixo + a chave de césar
-    result += String.fromCharCode(VIM_NUMBER.charCodeAt(i) + 2 + CESAR_KEY);
+    result += String.fromCharCode(vimNumber.charCodeAt(i) + 2 + CESAR_KEY);
   }
   // ! Business rule
   // Add cesar key to the end of result for server to be able to decrypt.
@@ -32,3 +32,5 @@ const encrypt = (vimNumber) => {
 }
 
 console.log(encrypt(VIM_NUMBER));
+
+module.exports = encrypt
