@@ -2,8 +2,8 @@ const VIM_NUMBER = "1HGCM82633A004352";
 
 const getCesarKey = (vimNumber) => {
   let CESAR_KEY = 0;
-  for (let i = 0; i < VIM_NUMBER.length; i++) {
-    const currChar = VIM_NUMBER[i];
+  for (let i = 0; i < vimNumber.length; i++) {
+    const currChar = vimNumber[i];
     if (!isNaN(currChar)) {
       // Soma todos Números do VIM_NUMBER para obter a chave césar
       CESAR_KEY += parseInt(currChar, 10);
